@@ -2,6 +2,7 @@ import * as React from 'react';
 import cn from 'classnames';
 import { createBlock } from '@/utils';
 import './main-screen.scss';
+import { Timer } from '@/components';
 
 const block = createBlock('main-screen');
 
@@ -18,6 +19,10 @@ const MainScreen = ({ isOpened }: { isOpened: boolean }) => (
           <p>{'Приглашаем вас\nна нашу свадьбу'}</p>
           <p>{'1 марта\n2025'}</p>
         </div>
+      </div>
+      <div className={block.element('timer-wrapper')}>
+        <div>До свадьбы осталось:</div>
+        <Timer />
       </div>
     </div>
   </div>

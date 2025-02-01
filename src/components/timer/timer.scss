@@ -1,0 +1,22 @@
+.timer {
+  display: flex;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+
+  &__time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 65px;
+  }
+
+  &__value {
+    font-size: 1.5em;
+  }
+
+  &__suffix {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+}
