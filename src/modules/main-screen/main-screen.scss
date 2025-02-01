@@ -16,6 +16,14 @@
 }
 
 .main-screen {
+  margin-left: -999999999px;
+  margin-top: -999999999px;
+
+  &--open {
+    margin-left: unset;
+    margin-top: unset;
+  }
+
   &__intro-container {
     width: 100vw;
     height: 100vh;

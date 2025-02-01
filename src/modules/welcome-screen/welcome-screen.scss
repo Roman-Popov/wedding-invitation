@@ -41,7 +41,7 @@
     background-color: transparent;
     z-index: 10000;
     pointer-events: none;
-    transition: background-color 250ms 500ms cubic-bezier(1, 0, 1, 1);
+    transition: background-color 250ms 1000ms cubic-bezier(1, 0, 1, 1);
   }
 
   &--opened {

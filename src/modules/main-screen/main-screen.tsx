@@ -5,8 +5,8 @@ import './main-screen.scss';
 
 const block = createBlock('main-screen');
 
-const MainScreen = () => (
-  <div className={block.block()}>
+const MainScreen = ({ isOpened }: { isOpened: boolean }) => (
+  <div className={cn(block.block(), block.modifyBlock({ open: isOpened }))}>
     <div className={block.element('intro-container')}>
       <div className={block.element('intro-content')}>
         <div className={block.element('names')}>
