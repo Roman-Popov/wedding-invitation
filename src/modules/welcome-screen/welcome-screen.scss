@@ -30,6 +30,26 @@
     filter: brightness(1.7);
   }
 
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 10000;
+    pointer-events: none;
+    transition: background-color 250ms 500ms cubic-bezier(1, 0, 1, 1);
+  }
+
+  &--opened {
+    &::after {
+      background-color: white;
+    }
+  }
+
   &__header-wrapper {
     display: flex;
     flex-wrap: wrap;

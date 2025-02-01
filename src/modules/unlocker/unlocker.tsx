@@ -9,7 +9,7 @@ import './unlocker.scss';
 
 const block = createBlock('unlocker');
 
-const Unlocker = () => {
+const Unlocker = ({ setOpened }: { setOpened: (value: boolean) => any }) => {
   const [parent, setParent] = useState<UniqueIdentifier | null>(null);
   const [shouldUpdate, setShouldUpdate] = useState(true);
   const [x, setX] = useState(0);
@@ -30,6 +30,7 @@ const Unlocker = () => {
       onDragEnd={({ over }) => {
         setParent(over ? over.id : null);
         if (over) {
+          setOpened(true);
           setShouldUpdate(false);
         } else {
           setX(0);
