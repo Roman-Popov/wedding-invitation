@@ -1,4 +1,4 @@
-export const TARGET_DATE = '2025-03-01 14:14+5';
+export const TARGET_DATE = '2025-03-01T09:14:00.000Z';
 
 export const DAY_SUFFIXES = {
   one: 'день',
