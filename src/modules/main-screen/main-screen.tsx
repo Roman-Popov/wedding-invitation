@@ -24,6 +24,7 @@ const MainScreen = ({ isOpened }: { isOpened: boolean }) => (
         <div>До свадьбы осталось:</div>
         <Timer />
       </div>
+      <div className={block.element('inviting-arrows')} />
     </div>
   </div>
 );
