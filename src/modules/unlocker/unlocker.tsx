@@ -49,7 +49,14 @@ const Unlocker = ({ setOpened }: { setOpened: (value: boolean) => any }) => {
             {parent === null ? <DraggableItem onTransform={handleMove} /> : null}
           </div>
           <Droppable id={DROPZONE_ID}>
-            {parent === DROPZONE_ID ? <DraggableItem /> : null}
+            {parent === DROPZONE_ID
+              ? (
+                <>
+                  <DraggableItem />
+                  <div className={block.element('loader')} />
+                </>
+              )
+              : null}
           </Droppable>
         </div>
       </div>

@@ -21,7 +21,7 @@
     left: 0;
     background-image: url("@/assets/images/wall.jpg");
     background-size: 300px;
-    background-color: wheat;
+    background-color: black;
     filter: brightness(1.7);
   }
 
@@ -36,7 +36,7 @@
     background-color: transparent;
     z-index: 10000;
     pointer-events: none;
-    transition: background-color 250ms 1000ms cubic-bezier(1, 0, 1, 1);
+    transition: background-color 250ms 1250ms cubic-bezier(1, 0, 1, 1);
   }
 
   &--opened {

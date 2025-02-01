@@ -29,7 +29,7 @@ const WelcomeScreen = ({ onOpen }: { onOpen: () => any }) => {
 
   return (
     <div
-      className={cn(block.block(), block.modifyBlock({ opened }))}
+      className={cn(block.block(), block.modifyBlock({ opened: opened && isBgLoaded }))}
       onTransitionEnd={(e) => {
         if (e.target === e.currentTarget) {
           setIsTransitionEnd(true);
