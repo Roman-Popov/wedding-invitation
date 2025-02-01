@@ -1,4 +1,4 @@
 export { Draggable } from './draggable';
-export { DraggableItem } from './draggableItem';
-export { DraggableOverlay } from './draggableOverlay';
+export { DraggableItem } from './draggable-item';
+export { DraggableOverlay } from './draggable-overlay';
 export { Droppable } from './droppable';

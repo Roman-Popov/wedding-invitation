@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { createBlock } from '@/utils';
-// import type { WelcomeScreenProps } from './welcomeScreen-types';
-import './welcomeScreen.scss';
+import './welcome-screen.scss';
 import { Unlocker } from '../unlocker';
 
-const block = createBlock('welcomeScreen');
+const block = createBlock('welcome-screen');
 
 const WelcomeScreen = () => (
   <div className={block.block()}>
