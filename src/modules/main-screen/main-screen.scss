@@ -1,9 +1,11 @@
 .main-screen {
-  margin-left: -999999999px;
-  margin-top: -999999999px;
+  position: absolute;
+  left: -999999999px;
+  top: -999999999px;
 
   &--open {
-    margin-left: unset;
-    margin-top: unset;
+    position: static;
+    left: unset;
+    top: unset;
   }
 }

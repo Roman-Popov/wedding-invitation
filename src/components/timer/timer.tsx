@@ -36,7 +36,7 @@ const Timer = () => {
   return (
     <div className={block.block()}>
       {data.map(({ value, suffix }) => (
-        <div className={block.element('time-block')}>
+        <div key={suffix} className={block.element('time-block')}>
           <span className={block.element('value')}>{value}</span>
           <span className={block.element('suffix')}>{suffix}</span>
         </div>
