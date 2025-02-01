@@ -1,8 +1,3 @@
-@font-face {
-  font-family: esenin;
-  src: url('./assets/esenin-script.ttf')
-}
-
 .welcome-screen {
   position: fixed;
   top: 0;
@@ -24,7 +19,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("./assets/wall.jpg");
+    background-image: url("@/assets/images/wall.jpg");
     background-size: 300px;
     background-color: wheat;
     filter: brightness(1.7);

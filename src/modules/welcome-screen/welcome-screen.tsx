@@ -1,20 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
 import { createBlock } from '@/utils';
-import './welcome-screen.scss';
+// eslint-disable-next-line import/extensions
+import bgFlowerImageUrl from '@/assets/images/bg-flowers.png';
 import { Unlocker } from '../unlocker';
+import './welcome-screen.scss';
 
 const block = createBlock('welcome-screen');
 
 const WelcomeScreen = ({ onOpen }: { onOpen: () => any }) => {
   const [opened, setOpened] = useState(false);
+  const [isTransitionEnd, setIsTransitionEnd] = useState(false);
+  const [isBgLoaded, setIsBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const bgFlowerImage = new Image();
+    bgFlowerImage.addEventListener('load', () => {
+      setIsBgLoaded(true);
+    });
+    bgFlowerImage.src = bgFlowerImageUrl;
+  }, []);
+
+  useEffect(() => {
+    if (isTransitionEnd && isBgLoaded) {
+      onOpen();
+    }
+  }, [isBgLoaded, isTransitionEnd, onOpen]);
 
   return (
     <div
       className={cn(block.block(), block.modifyBlock({ opened }))}
       onTransitionEnd={(e) => {
         if (e.target === e.currentTarget) {
-          onOpen();
+          setIsTransitionEnd(true);
         }
       }}
     >

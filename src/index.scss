@@ -1,13 +1,18 @@
 @font-face {
   font-family: CormorantInfant;
-  src: url('./assets/fonts/CormorantInfant-Regular.ttf');
+  src: url('./assets/fonts/CormorantInfant-Regular.woff2');
   font-weight: 400;
 }
 
 @font-face {
   font-family: CormorantInfant;
-  src: url('./assets/fonts/CormorantInfant-Bold.ttf');
+  src: url('./assets/fonts/CormorantInfant-Bold.woff2');
   font-weight: 600;
+}
+
+@font-face {
+  font-family: esenin;
+  src: url('@/assets/fonts/esenin-script.woff2')
 }
 
 :root {
