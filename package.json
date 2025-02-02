@@ -13,6 +13,8 @@
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/modifiers": "^9.0.0",
     "@dnd-kit/utilities": "^3.2.2",
+    "@yandex/ymaps3-default-ui-theme": "^0.0.19",
+    "@yandex/ymaps3-types": "^1.0.15731128",
     "classnames": "^2.5.1",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",

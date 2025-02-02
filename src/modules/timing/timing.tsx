@@ -41,7 +41,6 @@ const Timing = () => (
           <span className="number">75</span>
         </AddressBlock>
       </div>
-
     </div>
   </div>
 );

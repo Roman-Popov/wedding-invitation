@@ -1,0 +1,24 @@
+.map-controls {
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 8px;
+
+    &--fullscreen {
+      width: 16px;
+      background-size: 55%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--enter-fullscreen {
+      background-image: url('@/assets/icons/enter-fullscreen.svg');
+    }
+
+    &--exit-fullscreen {
+      background-image: url('@/assets/icons/exit-fullscreen.svg');
+    }
+  }
+}

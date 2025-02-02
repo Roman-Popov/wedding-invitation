@@ -2,6 +2,7 @@ import * as React from 'react';
 import cn from 'classnames';
 import { createBlock } from '@/utils';
 import { Timing } from '@/modules/timing';
+import { Location } from '@/modules/location';
 import { Intro } from '@/components';
 import './main-screen.scss';
 
@@ -12,6 +13,7 @@ const MainScreen = ({ isOpened }: { isOpened: boolean }) => (
     <Intro />
     <div className={block.element('content')}>
       <Timing />
+      <Location />
     </div>
   </div>
 );
