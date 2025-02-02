@@ -1,0 +1,50 @@
+.address-block {
+  white-space: pre;
+  margin-top: 12px;
+
+  &__copy-icon {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    width: 12px;
+    height: 15px;
+    background-image: url('@/assets/icons/copy.svg');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-left: 8px;
+    margin-bottom: -4px;
+    border-bottom: 1px dotted black;
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    background: hsla(43, 51%, 84%, 0.9);
+    box-shadow:
+      0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    padding: 6px;
+    top: -40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      display: block;
+      background: hsla(43, 51%, 84%, 0.9);
+      position: absolute;
+      bottom: -4px;
+      transform: rotate(45deg);
+      box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
