@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createBlock } from '@/utils';
 import './details.scss';
+import { Link } from '../link';
 
 const block = createBlock('details');
 
@@ -33,7 +34,16 @@ const Details = () => (
         Пожалуйста, по возможности, оставьте малышей дома — ваш комфорт важен для нас.
       </li>
       <li className="allergy">
-        Если у вас аллергия — обязательно сообщите нам об этом в telegram или whatsApp!
+        Если у вас аллергия — обязательно сообщите нам об этом в
+        {' '}
+        <Link href="https://t.me/barmalewich">
+          Telegram
+        </Link>
+        {' или '}
+        <Link href="https://wa.me/79175828798">
+          WhatsApp
+        </Link>
+        !
       </li>
     </ul>
   </div>
