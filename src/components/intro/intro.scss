@@ -1,8 +1,3 @@
-@font-face {
-  font-family: saintAmour;
-  src: url('@/assets/fonts/saint-amour-script.woff2');
-}
-
 .intro {
   width: 100vw;
   height: 100vh;
@@ -44,7 +39,7 @@
   }
 
   &__invitation {
-    white-space: pre;
+    white-space: pre-line;
     text-transform: uppercase;
     font-weight: bold;
   }

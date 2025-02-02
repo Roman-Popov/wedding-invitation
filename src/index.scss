@@ -20,6 +20,11 @@
   src: url('@/assets/fonts/esenin-script.woff2')
 }
 
+@font-face {
+  font-family: saintAmour;
+  src: url('@/assets/fonts/saint-amour-script.woff2');
+}
+
 :root {
   overflow-x: hidden;
   font-family: Cormorant, serif;
