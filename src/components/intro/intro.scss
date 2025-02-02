@@ -89,5 +89,9 @@
       40% { transform: rotate(90deg) translateX(0%); }
       100% { transform: rotate(90deg) translateX(0%); }
     }
+
+    &--scrolled {
+      animation: wobble 4s ease none;
+    }
   }
 }
