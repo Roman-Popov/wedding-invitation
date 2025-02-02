@@ -1,0 +1,76 @@
+.details {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    text-indent: 1.75em;
+    position: relative;
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -0.2em;
+      left: 0;
+      width: 1.4em;
+      height: 1.4em;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &.dress-code {
+      &::before {
+        background-image: url('@/assets/emoji/dress.png');
+      }
+    }
+
+    &.gift {
+      &::before {
+        background-image: url('@/assets/emoji/gift.png');
+      }
+    }
+
+    &.flowers {
+      &::before {
+        background-image: url('@/assets/emoji/flowers.png');
+      }
+    }
+
+    &.mic {
+      &::before {
+        background-image: url('@/assets/emoji/mic.png');
+      }
+    }
+
+    &.baby {
+      &::before {
+        background-image: url('@/assets/emoji/baby.png');
+        transform: rotate(-70deg);
+      }
+    }
+
+    &.allergy {
+      font-weight: 900;
+      border: 1px solid #ef6615;
+      border-radius: 10px;
+      padding: 10px;
+      width: 100%;
+      margin-left: -10px;
+
+      &::before {
+        background-image: url('@/assets/emoji/allergy.png');
+        width: 1.25em;
+        height: 1.25em;
+        top: 0.45em;
+        left: 10px;
+      }
+    }
+  }
+}
