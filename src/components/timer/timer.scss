@@ -1,18 +1,18 @@
 .timer {
   display: flex;
-  font-variant-numeric: tabular-nums;
   font-weight: bold;
 
   &__time-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
     width: 65px;
+    margin-top: 5px;
   }
 
   &__value {
     font-size: 1.5em;
+    font-family: CormorantInfant, serif;
   }
 
   &__suffix {

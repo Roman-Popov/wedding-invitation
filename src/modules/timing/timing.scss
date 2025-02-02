@@ -1,0 +1,67 @@
+.timing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__block {
+    padding-left: 90px;
+    box-sizing: border-box;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: calc(100% + 20px);
+        border-right: 2px dashed hsla(42, 96%, 20%, 0.468);
+        position: absolute;
+        left: 25px;
+        top: 30px;
+        z-index: -1;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-color: #eedfc0;
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 100%;
+      position: absolute;
+      top: 6px;
+      left: 0;
+    }
+
+    &--rings {
+      &::before {
+        background-image: url('@/assets/icons/rings.svg');
+        transform: rotate(15deg);
+      }
+    }
+
+    &--glasses {
+      &::before {
+        background-image: url('@/assets/icons/glasses.svg');
+      }
+    }
+
+    &--banquet {
+      &::before {
+        background-image: url('@/assets/icons/banquet.svg');
+        background-size: 80%;
+      }
+    }
+  }
+
+  &__description {
+    white-space: pre;
+    margin-top: 12px;
+  }
+}

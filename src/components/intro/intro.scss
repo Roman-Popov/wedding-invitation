@@ -6,13 +6,13 @@
 .intro {
   width: 100vw;
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
 
   background-image: url('@/assets/images/bg-flowers.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100vh;
-  background-size: auto 100dvh;
+  background-size: auto 100svh;
 
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@
   &__timer-wrapper {
     position: absolute;
     bottom: 70px;
-    background-color: rgba(245, 222, 179, 0.9);
+    background-color: rgba(238, 223, 192, 0.9);
     padding: 10px;
     border-radius: 20px;
     box-shadow:

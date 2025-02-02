@@ -16,7 +16,11 @@ const Intro = () => (
       </div>
       <div className={block.element('invitation')}>
         <p>{'Приглашаем вас\nна нашу свадьбу'}</p>
-        <p>{'1 марта\n2025'}</p>
+        <p>
+          <span className="number">
+            {'1 марта\n2025'}
+          </span>
+        </p>
       </div>
     </div>
     <div className={block.element('timer-wrapper')}>

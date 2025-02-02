@@ -1,0 +1,26 @@
+.heading-block {
+  margin-bottom: 10px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__heading,
+  &__time {
+    font-weight: 500;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 22px;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  &__time {
+    font-size: 28px;
+  }
+}

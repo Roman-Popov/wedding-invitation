@@ -1,4 +1,9 @@
 @font-face {
+  font-family: Cormorant;
+  src: url('./assets/fonts/Cormorant.woff2') format('woff2');
+}
+
+@font-face {
   font-family: CormorantInfant;
   src: url('./assets/fonts/CormorantInfant-Regular.woff2');
   font-weight: 400;
@@ -17,5 +22,18 @@
 
 :root {
   overflow-x: hidden;
+  font-family: Cormorant, serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 28px;
+  border-bottom: 1px solid black;
+  margin: 0 0 40px;
+  padding-bottom:2px;
+  font-weight: 600;
+}
+
+.number {
   font-family: CormorantInfant, serif;
 }
