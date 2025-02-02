@@ -8,6 +8,7 @@ import {
   Details,
   Epilogue,
   Intro,
+  Invitation,
 } from '@/components';
 import './main-screen.scss';
 
@@ -17,6 +18,7 @@ const MainScreen = ({ isOpened }: { isOpened: boolean }) => (
   <div className={cn(block.block(), block.modifyBlock({ open: isOpened }))}>
     <Intro />
     <div className={block.element('content')}>
+      <Invitation />
       <Timing />
       <Location />
       <Confirmation />
