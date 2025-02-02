@@ -1,22 +1,34 @@
 import * as React from 'react';
-import { createBlock } from '@/utils';
+import { createBlock, getNames } from '@/utils';
 import './epilogue.scss';
 
 const block = createBlock('epilogue');
 
-const Epilogue = () => (
-  <div className={block.block()}>
-    <h1>* * *</h1>
+const Epilogue = () => {
+  const { isSingle, noNames } = getNames();
 
-    <span className={block.element('msg')}>
-      {'Самые счастливые моменты — это те, которые можно разделить с дорогими людьми.\n\n'}
-      Спасибо, что вы — часть нашей истории!
-    </span>
+  return (
+    <div className={block.block()}>
+      <h1>* * *</h1>
 
-    <div className={block.element('await')}>
-      Ждем вас!
+      <span className={block.element('msg')}>
+        {'Самые счастливые моменты — это те, которые можно разделить с дорогими людьми.\n\n'}
+        Спасибо, что
+        {' '}
+        {noNames || isSingle ? 'ты' : 'вы'}
+        {' '}
+        — часть нашей истории!
+      </span>
+
+      <div className={block.element('await')}>
+        Ждем
+        {' '}
+        {noNames || isSingle ? 'тебя' : 'вас'}
+        {' '}
+        !
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const MemoizedEpilogue = React.memo(Epilogue);

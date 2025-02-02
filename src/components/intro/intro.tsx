@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
-import { createBlock } from '@/utils';
+import { createBlock, getNames } from '@/utils';
 import { Timer } from '@/components';
 import './intro.scss';
 
@@ -24,6 +24,8 @@ const Intro = () => {
     };
   }, []);
 
+  const { isSingle, noNames } = getNames();
+
   return (
     <div className={block.block()}>
       <div className={block.element('content')}>
@@ -33,7 +35,7 @@ const Intro = () => {
           <span className={block.element('name')}>Екатерина</span>
         </div>
         <div className={block.element('invitation')}>
-          <p>{'Приглашаем вас\nна нашу свадьбу'}</p>
+          <p>{`Приглашаем ${noNames || isSingle ? 'тебя' : 'вас'} \nна нашу свадьбу`}</p>
           <p>
             <span className="number">
               {'1 марта\n2025'}
