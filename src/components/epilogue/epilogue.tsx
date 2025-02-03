@@ -5,7 +5,7 @@ import './epilogue.scss';
 const block = createBlock('epilogue');
 
 const Epilogue = () => {
-  const { isSingle, noNames } = getNames();
+  const { isSingle } = getNames();
 
   return (
     <div className={block.block()}>
@@ -15,7 +15,7 @@ const Epilogue = () => {
         {'Самые счастливые моменты — это те, которые можно разделить с дорогими людьми.\n\n'}
         Спасибо, что
         {' '}
-        {noNames || isSingle ? 'ты' : 'вы'}
+        {isSingle ? 'ты' : 'вы'}
         {' '}
         — часть нашей истории!
       </span>
@@ -23,7 +23,7 @@ const Epilogue = () => {
       <div className={block.element('await')}>
         Ждем
         {' '}
-        {noNames || isSingle ? 'тебя' : 'вас'}
+        {isSingle ? 'тебя' : 'вас'}
         {' '}
         !
       </div>

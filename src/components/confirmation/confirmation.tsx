@@ -5,7 +5,7 @@ import { Link } from '../link';
 const block = createBlock('confirmation');
 
 const Confirmation = () => {
-  const { isSingle, noNames } = getNames();
+  const { isSingle } = getNames();
 
   return (
     <div className={block.block()}>
@@ -21,7 +21,7 @@ const Confirmation = () => {
           Мы хотим создать дружественную атмосферу на мероприятии,
           поэтому предлагаем
           {' '}
-          {noNames || isSingle ? 'тебе' : 'вам'}
+          {isSingle ? 'тебе' : 'вам'}
           {' '}
           в качестве подтверждения записать и
           отправить небольшую видео-визитку в

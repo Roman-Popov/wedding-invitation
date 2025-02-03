@@ -7,24 +7,24 @@ const block = createBlock('location');
 
 const Location = () => {
   const containerRef = useRef<null | HTMLDivElement>(null);
-  const { isSingle, noNames } = getNames();
+  const { isSingle } = getNames();
 
   return (
     <div className={block.block()}>
       <h1>Карта</h1>
       Для
       {' '}
-      {noNames || isSingle ? 'твоего' : 'вашего'}
+      {isSingle ? 'твоего' : 'вашего'}
       {' '}
       удобства мы прикрепляем карту.
       Уверены, что у
       {' '}
-      {noNames || isSingle ? 'тебя' : 'вас'}
+      {isSingle ? 'тебя' : 'вас'}
       {' '}
       не возникнет трудностей с поиском места проведения свадьбы,
       и будем рады видеть
       {' '}
-      {noNames || isSingle ? 'тебя' : 'вас'}
+      {isSingle ? 'тебя' : 'вас'}
       {' '}
       среди наших гостей!
       <div className={block.element('map-container')} ref={containerRef}>

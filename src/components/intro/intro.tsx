@@ -38,7 +38,7 @@ const Intro = ({ isOpened }: { isOpened: boolean }) => {
     }
   }, [shouldPlay]);
 
-  const { isSingle, noNames } = getNames();
+  const { isSingle } = getNames();
 
   return (
     <div className={cn(block.block(), block.modifyBlock({ opened: isOpened }))}>
@@ -60,7 +60,7 @@ const Intro = ({ isOpened }: { isOpened: boolean }) => {
           <span className={block.element('name')}>Екатерина</span>
         </div>
         <div className={block.element('invitation')}>
-          <p>{`Приглашаем ${noNames || isSingle ? 'тебя' : 'вас'} \nна нашу свадьбу`}</p>
+          <p>{`Приглашаем ${isSingle ? 'тебя' : 'вас'} \nна нашу свадьбу`}</p>
           <p>
             <span className="number">
               {'1 марта\n2025'}
