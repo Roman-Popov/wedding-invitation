@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { getNames } from '@/utils';
+import { createBlock, getNames } from '@/utils';
+import './invitation.scss';
+
+const block = createBlock('invitation');
 
 const Invitation = () => {
   const {
@@ -10,7 +13,8 @@ const Invitation = () => {
   } = getNames();
 
   return (
-    <div>
+    <div className={block.block()}>
+      <div className={block.element('pic')} />
       <h1 style={{ borderBottom: 'none', whiteSpace: 'pre-line', textAlign: 'center' }}>
         {noNames
           ? 'Дорогой гость'
