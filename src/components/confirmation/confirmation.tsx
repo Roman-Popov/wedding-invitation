@@ -14,7 +14,7 @@ const Confirmation = () => {
         <div>
           Просьба подтвердить участие до
           {' '}
-          <span className="number">08.02.2025</span>
+          <span className="number">10.02.2025</span>
           , чтобы мы смогли организовать все максимально комфортно и вкусно.
         </div>
         <div>
