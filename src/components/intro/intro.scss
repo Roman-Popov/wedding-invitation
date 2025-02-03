@@ -15,6 +15,36 @@
   justify-content: center;
   user-select: none;
 
+  &__toggle-song {
+    width: 60px;
+    height: 60px;
+    border: none;
+    position: absolute;
+    top: -200px;
+    margin: 100px auto;
+    border-radius: 100%;
+    background-color: #794b30;
+    background-image: url('@/assets/icons/tone.svg');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid #eee4d1;
+    animation: pulse 1s infinite ease-in-out alternate;
+    cursor: pointer;
+    transition: top 1s 1s cubic-bezier(0, 0.12, 0, 1);
+
+    @keyframes pulse {
+      from { transform: scale(0.95); }
+      to { transform: scale(1.05); }
+    }
+
+    &--pause {
+      background-image: url('@/assets/icons/pause.svg');
+      background-size: 50%;
+      animation: none;
+    }
+  }
+
   &__content {
     width: 350px;
     max-width: 80%;
@@ -122,6 +152,10 @@
     background-size: auto 100svh;
 
     .intro {
+      &__toggle-song {
+        top: 0;
+      }
+
       &__name {
         transform: none;
 
