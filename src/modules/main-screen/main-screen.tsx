@@ -17,13 +17,15 @@ const block = createBlock('main-screen');
 const MainScreen = ({ isOpened }: { isOpened: boolean }) => (
   <div className={cn(block.block(), block.modifyBlock({ open: isOpened }))}>
     <Intro />
-    <div className={block.element('content')}>
-      <Invitation />
-      <Timing />
-      <Location />
-      <Confirmation />
-      <Details />
-      <Epilogue />
+    <div className={block.element('content-wrapper')}>
+      <div className={block.element('content')}>
+        <Invitation />
+        <Timing />
+        <Location />
+        <Confirmation />
+        <Details />
+        <Epilogue />
+      </div>
     </div>
   </div>
 );

@@ -24,10 +24,8 @@
     align-items: center;
     gap: 15px;
     padding-top: 5px;
-
-    @media screen and (width <= 410px) {
-      align-items: flex-end;
-    }
+    background-color: white;
+    border-radius: 10px;
   }
 
   &__btn-wrapper {
