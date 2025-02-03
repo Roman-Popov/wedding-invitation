@@ -28,15 +28,19 @@ const Timer = () => {
 
   const data = [
     { value: days, suffix: getSuffix(days, DAY_SUFFIXES) },
+    { value: ':', suffix: '' },
     { value: hours, suffix: getSuffix(hours, HOUR_SUFFIXES) },
+    { value: ':', suffix: '' },
     { value: minutes, suffix: getSuffix(minutes, MINUTE_SUFFIXES) },
+    { value: ':', suffix: '' },
     { value: seconds, suffix: getSuffix(seconds, SECONDS_SUFFIXES) },
   ];
 
   return (
     <div className={block.block()}>
-      {data.map(({ value, suffix }) => (
-        <div key={suffix} className={block.element('time-block')}>
+      {data.map(({ value, suffix }, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <div key={i} className={block.element('time-block')}>
           <span className={block.element('value')}>{value}</span>
           <span className={block.element('suffix')}>{suffix}</span>
         </div>
