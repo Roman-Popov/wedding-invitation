@@ -6,8 +6,9 @@
   background-image: url('@/assets/images/bg-flowers.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 100vh;
-  background-size: auto 100svh;
+  background-size: auto 120vh;
+  background-size: auto 120svh;
+  transition: background-size 1s ease-out;
 
   display: flex;
   align-items: center;
@@ -32,16 +33,40 @@
 
   &__name {
     height: 50px;
+    transform: none;
+    transition: transform 2s cubic-bezier(0, 0.12, 0, 1);
+
+    &:first-child {
+      transform: translate(-60px, -60px) scale(1.5);
+    }
+
+    &:last-child {
+      transform: translate(-60px, 60px) scale(1.5);
+      transition-delay: 0.2s;
+    }
 
     &--and {
       padding-left: 80px;
+      transform: scale(0.5);
+      transition-delay: 0.1s;
     }
+  }
+
+  &__invitation,
+  &__timer-wrapper {
+    transition: all 1s 1s cubic-bezier(0, 0.12, 0, 1);
+  }
+
+  &__invitation,
+  &__inviting-arrows {
+    opacity: 0;
   }
 
   &__invitation {
     white-space: pre-line;
     text-transform: uppercase;
     font-weight: bold;
+    transform: translateY(50px);
   }
 
   &__timer-wrapper {
@@ -50,6 +75,7 @@
     background-color: rgba(238, 223, 192, 0.9);
     padding: 10px;
     border-radius: 20px;
+    transform: translateY(200px);
     box-shadow:
       0px 2px 1px -1px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -73,6 +99,7 @@
     background-position: center;
     filter: drop-shadow(0 0 2px black) drop-shadow(0 0 6px black);
     animation: wobble 4s ease infinite;
+    transition: opacity 1s 1s cubic-bezier(0, 0.12, 0, 1);
 
     @keyframes wobble {
       0% { transform: rotate(90deg) translateX(0%); }
@@ -87,6 +114,34 @@
 
     &--scrolled {
       animation: wobble 4s ease none;
+    }
+  }
+
+  &--opened {
+    background-size: auto 100vh;
+    background-size: auto 100svh;
+
+    .intro {
+      &__name {
+        transform: none;
+
+        &--and {
+          transform: none;
+        }
+      }
+
+      &__invitation {
+        transform: none;
+      }
+
+      &__invitation,
+      &__inviting-arrows {
+        opacity: 1;
+      }
+
+      &__timer-wrapper {
+        transform: none;
+      }
     }
   }
 }
