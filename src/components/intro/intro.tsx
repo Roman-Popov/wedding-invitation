@@ -43,7 +43,7 @@ const Intro = ({ isOpened }: { isOpened: boolean }) => {
   return (
     <div className={cn(block.block(), block.modifyBlock({ opened: isOpened }))}>
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <audio ref={audioRef} src={songUrl} />
+      <audio ref={audioRef} src={songUrl} loop />
       <button
         className={cn(
           block.element('toggle-song'),
