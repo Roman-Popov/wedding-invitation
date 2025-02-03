@@ -1,0 +1,62 @@
+.footer {
+  max-width: 100%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: white;
+  width: 200px;
+  padding: 5px;
+  border-radius: 10px;
+  opacity: 0.75;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__text {
+    display: flex;
+    gap: 0.3em;
+  }
+
+  &__heart {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: url('@/assets/icons/heart.svg');
+  }
+
+  &__contacts-wrapper {
+    a {
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      background-size: 100%;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+  }
+
+
+  &__telegram {
+    background-image: url('@/assets/icons/telegram.svg');
+  }
+
+  &__mail {
+    background-image: url('@/assets/icons/mail.svg');
+  }
+
+  &__heart,
+  a {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}

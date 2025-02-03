@@ -20,6 +20,9 @@
     background-size: 900px;
     background-position-y: 150px;
     background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &::after {
       display: block;
@@ -33,7 +36,7 @@
       z-index: -1000;
 
       @media screen and (max-width: 550px) {
-        background: linear-gradient(to bottom, white 100px, #f6ecdc99 200px, #f6ecdc99 calc(100% - 200px), white calc(100% - 200px));
+        background: linear-gradient(to bottom, white 100px, #f6ecdc99 200px, #f6ecdc99 calc(100% - 300px), white calc(100% - 200px));
       }
     }
   }

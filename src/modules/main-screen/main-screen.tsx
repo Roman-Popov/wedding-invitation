@@ -7,6 +7,7 @@ import {
   Confirmation,
   Details,
   Epilogue,
+  Footer,
   Intro,
   Invitation,
 } from '@/components';
@@ -26,6 +27,7 @@ const MainScreen = ({ isOpened }: { isOpened: boolean }) => (
         <Details />
         <Epilogue />
       </div>
+      <Footer />
     </div>
   </div>
 );
