@@ -69,7 +69,7 @@ const Intro = ({ isOpened }: { isOpened: boolean }) => {
         </div>
       </div>
       <div className={block.element('timer-wrapper')}>
-        <div>До свадьбы осталось:</div>
+        <div>Мы женаты уже:</div>
         <Timer />
       </div>
       <div

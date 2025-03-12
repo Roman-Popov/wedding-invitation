@@ -2,10 +2,9 @@ import React from 'react';
 import { createBlock } from '@/utils';
 import { useTimer } from '@/hooks';
 import {
+  YEAR_SUFFIXES,
+  MONTH_SUFFIXES,
   DAY_SUFFIXES,
-  HOUR_SUFFIXES,
-  MINUTE_SUFFIXES,
-  SECONDS_SUFFIXES,
   TARGET_DATE,
 } from './timer-constants';
 import './timer.scss';
@@ -20,21 +19,32 @@ const getSuffix = (n: number, dict: Record<Intl.LDMLPluralRule, string>) => {
 
 const Timer = () => {
   const {
+    years,
+    months,
     days,
-    hours,
-    minutes,
-    seconds,
   } = useTimer(TARGET_DATE);
 
-  const data = [
-    { value: days, suffix: getSuffix(days, DAY_SUFFIXES) },
-    { value: ':', suffix: '' },
-    { value: hours, suffix: getSuffix(hours, HOUR_SUFFIXES) },
-    { value: ':', suffix: '' },
-    { value: minutes, suffix: getSuffix(minutes, MINUTE_SUFFIXES) },
-    { value: ':', suffix: '' },
-    { value: seconds, suffix: getSuffix(seconds, SECONDS_SUFFIXES) },
-  ];
+  const data = [];
+
+  if (years) {
+    data.push({ value: years, suffix: getSuffix(years, YEAR_SUFFIXES) });
+  }
+
+  if (months) {
+    if (data.length) {
+      data.push({ value: ':', suffix: '' });
+    }
+
+    data.push({ value: months, suffix: getSuffix(months, MONTH_SUFFIXES) });
+  }
+
+  if (days) {
+    if (data.length) {
+      data.push({ value: ':', suffix: '' });
+    }
+
+    data.push({ value: days, suffix: getSuffix(days, DAY_SUFFIXES) });
+  }
 
   return (
     <div className={block.block()}>
